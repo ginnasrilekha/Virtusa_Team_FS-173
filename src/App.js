@@ -8,19 +8,19 @@ import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
 import Modal from "./components/Modal";
-import Login from "./components/Login/Login";
+import Signup from "./components/Signup/Signup"
 class App extends Component {
 
   state = {
     loggedIn:false
   };
-  
+
   render() {
     return (
       <React.Fragment>
-        {this.state.loggedIn ? <Navbar /> : null}
+        {this.state.loggedIn ? <Navbar /> : null};
         <Switch>
-          <Route path="/Login" component={Login} />
+          <Route exact path="/signup" component={Signup} /> 
           <Route exact path="/" component={ProductList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />

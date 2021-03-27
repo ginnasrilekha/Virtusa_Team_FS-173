@@ -3,26 +3,18 @@ import React, { Component } from "react";
 export default class CartColumns extends Component {
   render() {
     return (
-      <div className="container-fluid text-center d-none d-lg-block">
-        <div className="row ">
-          <div className="col-10 mx-auto col-lg-2">
-            <p className="text-uppercase">products</p>
+      <div className="container-fluid text-center d-none d-lg-block" style={{backgroundColor:"#00FF00", borderRadius:"10px"}}>
+        <div className="row" style={{marginTop:"5%"}}>
+          <div className="col-10 offset-lg-3 col-lg-2">
+            <p className="text-uppercase">Product Name</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <p className="text-uppercase">name of product</p>
+          <div className="col-10 col-lg-2">
+            <p className="text-uppercase">Product Price</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <p className="text-uppercase">price</p>
+          <div className="col-10 col-lg-2">
+            <p className="text-uppercase">Quantity</p>
           </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <p className="text-uppercase">quantity</p>
-          </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <p className="text-uppercase">remove</p>
-          </div>
-          <div className="col-10 mx-auto col-lg-2">
-            <p className="text-uppercase">total</p>
-          </div>
+          
         </div>
       </div>
     );
