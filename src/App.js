@@ -8,7 +8,8 @@ import Details from "./components/Details";
 import Default from "./components/Default";
 import Cart from "./components/Cart";
 import Modal from "./components/Modal";
-import Signup from "./components/Signup/Signup"
+import Signup from "./components/Signup/Signup";
+import Login from "./components/Login/Login";
 class App extends Component {
 
   state = {
@@ -21,6 +22,7 @@ class App extends Component {
         {this.state.loggedIn ? <Navbar /> : null};
         <Switch>
           <Route exact path="/signup" component={Signup} /> 
+          <Route exact path="/Login" component={Login} /> 
           <Route exact path="/" component={ProductList} />
           <Route path="/details" component={Details} />
           <Route path="/cart" component={Cart} />
