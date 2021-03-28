@@ -10,6 +10,8 @@ import Cart from "./components/Cart";
 import Modal from "./components/Modal";
 import Signup from "./components/Signup/Signup";
 import Login from "./components/Login/Login";
+import Adminnav from "./components/admin/AdminNav/Adminnav.jsx";
+import Addprocuct from "./components/admin/AddProduct/Addproduct.jsx";
 class App extends Component {
 
   state = {
@@ -22,6 +24,8 @@ class App extends Component {
         {this.state.loggedIn ? <Navbar /> : null};
         <Switch>
           <Route exact path="/signup" component={Signup} /> 
+          <Route exact path="/Admin/AdminNav" component={Adminnav} /> 
+          <Route exact path="/Admin/AddProduct" component={Addprocuct} /> 
           <Route exact path="/Login" component={Login} /> 
           <Route exact path="/" component={ProductList} />
           <Route path="/details" component={Details} />

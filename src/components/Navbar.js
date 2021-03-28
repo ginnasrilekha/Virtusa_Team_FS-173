@@ -6,28 +6,33 @@ import { ButtonContainer } from "./Button";
 export default class Navbar extends Component {
   render() {
     return (
-      <Nav className="navbar navbar-expand-sm  navbar-dark px-sm-5">
+      <Nav className="navbar navbar-expand-sm  navbar-dark px-sm-5" id="userNavbar">
         {/* 
 https://www.iconfinder.com/icons/1243689/call_phone_icon
 Creative Commons (Attribution 3.0 Unported);
 https://www.iconfinder.com/Makoto_msk */}
-        <Link to="/">
+        
           <img src={logo} alt="store" className="navbar-brand" />
-        </Link>
-        <ul className="navbar-nav align-items-center">
+       
+        <ul className="navbar-nav align-items-center" >
           <li className="nav-item ml-5">
-            <Link to="/" className="nav-link">
-              products
+            <Link to="/" className="nav-link" id="mobileHomeButton">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item ml-5">
+            <Link to="/cart" className="nav-link" id="mobileCartButton">
+              Cart
+            </Link>
+          </li>
+          <li className="nav-item ml-5">
+            <Link to="#" className="nav-link" id="mobileOrderButton">
+              My Order
             </Link>
           </li>
         </ul>
-        <Link to="/cart" className="ml-auto">
-          <ButtonContainer>
-            <span className="mr-2">
-              <i className="fas fa-cart-plus " />
-            </span>
-            my cart
-          </ButtonContainer>
+        <Link to="/Login" className="ml-auto nav-link" id="logoutButton">
+           Logout 
         </Link>
       </Nav>
     );
