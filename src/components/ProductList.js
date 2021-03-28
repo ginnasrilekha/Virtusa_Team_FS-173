@@ -12,7 +12,7 @@ export default class ProductList extends Component {
     return (
       <React.Fragment>
         <ProductWrapper className="py-5">
-          <div className="container">
+          <div className="container" id="mobileHomeBody">
             <Title name="Welcome" title="Home" />
             <div className="row">
               <ProductConsumer>
